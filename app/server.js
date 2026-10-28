@@ -49,7 +49,7 @@ function validateCoupon(rawCode, subtotal, email) {
   }
   if (code === 'FLAT100') {
     // PLANTED BUG for the lab: the story says "₹500 or more", so this should be >=.
-    if (subtotal > 500) return { valid: true, code, discount: 100, message: 'FLAT100 applied: ₹100 off' };
+    if (subtotal >= 500) return { valid: true, code, discount: 100, message: 'FLAT100 applied: ₹100 off' };
     return { valid: false, message: 'FLAT100 needs an order of ₹500 or more' };
   }
   if (code === 'WELCOME50') {

@@ -1,0 +1,10 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "samy: run coupon spec",
+			"type": "shell",
+			"command": "npx playwright test tests/samy-coupon.spec.ts --reporter=list"
+		}
+	]
+}

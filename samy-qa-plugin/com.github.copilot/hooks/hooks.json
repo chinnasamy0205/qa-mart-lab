@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "type": "command",
+        "command": "node \"${PLUGIN_ROOT}/scripts/guard-app.cjs\"",
+        "timeoutSec": 10
+      }
+    ],
+    "postToolUse": [
+      {
+        "type": "command",
+        "matcher": "edit|create|patch",
+        "command": "node \"${PLUGIN_ROOT}/scripts/secret-scan.cjs\"",
+        "timeoutSec": 20
+      }
+    ]
+  }
+}

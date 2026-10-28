@@ -1,0 +1,8 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "samy-qa-plugin",
+  "version": "1.0.0",
+  "description": "QA Mart testing plugin: instructions, prompt files, skills, agents, an MCP server and guardrail hooks for coupon, stock-limit and order flows.",
+  "keywords": ["playwright", "testing", "qa", "mcp", "qamart"],
+  "license": "MIT"
+}
