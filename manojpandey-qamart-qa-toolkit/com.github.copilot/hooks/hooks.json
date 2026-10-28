@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "type": "command",
+        "matcher": "edit|create|write|replace|patch|insert",
+        "command": "node \"${PLUGIN_ROOT}/scripts/guard-app.cjs\"",
+        "timeoutSec": 10
+      }
+    ],
+    "postToolUse": [
+      {
+        "type": "command",
+        "matcher": "edit|create|patch",
+        "command": "node \"${PLUGIN_ROOT}/scripts/post-edit-checks.cjs\"",
+        "timeoutSec": 90
+      }
+    ]
+  }
+}
